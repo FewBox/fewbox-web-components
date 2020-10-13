@@ -1,0 +1,20 @@
+@import '../styles/fewbox-variables';
+
+.fb-wistia {
+    position: relative;
+    .background {
+        z-index: -10000;
+        position: absolute;
+        left: 0;
+        top: 0;
+        svg {
+            height: $promo-height;
+        }
+    }
+    a {
+        height: $promo-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

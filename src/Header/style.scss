@@ -1,0 +1,25 @@
+@import '../styles/fewbox-variables';
+
+.fb-header {
+    height: $header-height;
+    ul {
+        cursor: pointer;
+        li {
+            float: left;
+            margin: 0 10px;
+            padding: 8px 10px;
+            list-style: none;
+            .logo{
+                margin-right: 8px;
+                svg {
+                    height: 15px;
+                }
+            }
+            .slogan {
+                font-weight: 600;
+                padding-left: 6px;
+                font-size: 15px;
+            }
+        }
+    }
+}

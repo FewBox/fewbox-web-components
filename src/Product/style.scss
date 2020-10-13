@@ -1,0 +1,26 @@
+@import "../styles/fewbox-variables";
+
+.fb-product {
+    margin: $space-height 0;
+    .screenshot {
+        margin: $space-height 0;
+        svg {
+            height: 180px;
+        }
+    }
+    .screenshot-left {
+        text-align: left;
+    }
+    .screenshot-right {
+        text-align: right;
+    }
+    .spec {
+        margin: $space-height 0;
+    }
+    .spec-left {
+        text-align: left;
+    }
+    .spec-right {
+        text-align: right;
+    }
+}

@@ -1,0 +1,13 @@
+<svg class="hero-play-button-big" width="90px" height="90px" viewBox="0 0 90 90" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc></desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="play_button_big1" fill-rule="nonzero">
+            <circle id="Oval" fill="#131414" cx="45" cy="45" r="45"></circle>
+            <polygon id="Shape" fill="#FFFFFF"
+                points="64.6470588 45.8823529 32.8823529 66.1764706 32.8823529 25.5882353">
+            </polygon>
+        </g>
+    </g>
+</svg>

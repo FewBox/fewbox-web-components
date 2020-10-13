@@ -1,0 +1,23 @@
+export default {
+    'Link.Feature': 'Feature',
+    'Link.Pricing': 'Pricing',
+    'Link.Donate': '👍 Donate',
+    'Link.Registry': 'Registry',
+    'Label.FreeLicense': 'Free',
+    'Label.MonthlyLicense': 'Monthly',
+    'Label.YearlyLicense': 'Yearly',
+    'Label.Copyright': 'COPYRIGHT © 2020 BY FEWBOX, ALL RIGHTS RESERVED',
+    'Label.Brand': 'FewBox',
+    'Label.Trusted': 'TRUSTED BY ©FEWBOX CLIENTS',
+    'Label.Feature1Name': 'Feature 1',
+    'Label.Feature1Description': 'The best feature from FewBox.',
+    'Label.Feature2Name': 'Feature 2',
+    'Label.Feature2Description': 'The best feature from FewBox.',
+    'Label.Feature3Name': 'Feature 3',
+    'Label.Feature3Description': 'The best feature from FewBox.',
+    'Label.PricingTitle': 'Pricing',
+    'Label.PricingBody': 'The payment is processed by PayPal (Safeguard purchases). Any major credit card or debit card is supported, you don’t need a PayPal account to finish the order.',
+    'Label.ProductTitle': 'Features',
+    'Label.ProductBody': 'FewBox will provide Smart, Simple Cloud Plugin and Extentions to our clients.',
+    'Button.Purchase': 'Purchase'
+}

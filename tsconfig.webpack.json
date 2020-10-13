@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+      "outDir": "./dist",
+      "sourceMap": true,
+      "module": "esNext",
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": false,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "lib": [
+          "es2015",
+          "dom"
+      ],
+      //"forceConsistentCasingInFileNames": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      //"noImplicitAny": true,
+      "strictNullChecks": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noUnusedLocals": true,
+      "declaration": true,
+      "removeComments": true,
+      "allowSyntheticDefaultImports": true
+  },
+  "include": [
+      "src/**/*",
+      "custom.d.ts"
+  ],
+  "exclude": [
+    "src/next.ts"
+  ]
+}

@@ -1,0 +1,40 @@
+.fb-footer {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background-color: #e7e7e7;
+    height: 260px;
+    border: 1px solid #f8f8f8;
+    margin: 50px 0 0 0;
+    .trademark {
+        padding: 25px 0 25px 0;
+        .logo {
+            margin: 0 auto 0 auto;
+            svg {
+                height:15px;
+            }
+        }
+    }
+    .getInTouch {
+        ul {
+            list-style: none;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            display: inline-block;
+            li {
+                float: left;
+                text-align: center;
+                margin: 0 6px 3px 6px;
+                svg {
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .copyright {
+        color: #a9a9a9;
+        display: inline-block;
+        position: relative;
+        font-size: 12px;
+    }
+}
