@@ -10,7 +10,7 @@ export default class Hero extends React.Component<IHeroProps, any> {
     public render() {
         return (
             <div className="fb-hero">
-                <FewBox.Layout.Row>
+                <FewBox.Layout.Row textAlignType={FewBox.Layout.RowTextAlignType.Center}>
                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={2} />
                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={8}>
                         <h1>{this.props.title}</h1>

@@ -5,7 +5,6 @@ assets
 src
 .gitignore
 .travis.yml
-postcss.config.js
 tsconfig.json
 webpack.config.js
 webpack.common.js
