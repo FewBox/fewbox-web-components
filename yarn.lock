@@ -927,9 +927,9 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@fewbox/react-components@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.npmjs.org/@fewbox/react-components/-/react-components-0.0.10.tgz#9bb049af1b96daac1a6b5cd680828c56a6bc1bd7"
+"@fewbox/react-components@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.npmjs.org/@fewbox/react-components/-/react-components-0.0.11.tgz#2b854374c73e291686299ae21bcabfddd8b64f09"
 
 "@formatjs/ecma402-abstract@^1.2.5":
   version "1.2.5"

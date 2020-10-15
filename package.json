@@ -1,6 +1,6 @@
 {
   "name": "@fewbox/web-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "FewBox Web Components lib.",
   "main": "dist/index.js",
   "files": [
@@ -31,7 +31,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@fewbox/react-components": "^0.0.10",
+    "@fewbox/react-components": "^0.0.11",
     "@svgr/webpack": "^5.4.0",
     "@types/gapi": "^0.0.39",
     "@types/gapi.auth2": "^0.0.52",
