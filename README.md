@@ -1,3 +1,3 @@
-[![Build Status](https://travis-ci.com/FewBox/fewbox-react-components.svg?branch=master)](https://travis-ci.com/FewBox/fewbox-react-components)
+[![Build Status](https://travis-ci.com/FewBox/fewbox-web-components.svg?branch=master)](https://travis-ci.com/FewBox/fewbox-web-components)
 
-# fewbox-react-components
+# fewbox-web-components

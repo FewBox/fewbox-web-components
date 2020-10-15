@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FewBox/fewbox-react-components.git"
+    "url": "git+https://github.com/FewBox/fewbox-web-components.git"
   },
   "keywords": [
     "fewbox"
@@ -24,9 +24,9 @@
   "author": "FewBox",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/FewBox/fewbox-react-components/issues"
+    "url": "https://github.com/FewBox/fewbox-web-components/issues"
   },
-  "homepage": "https://github.com/FewBox/fewbox-react-components#readme",
+  "homepage": "https://github.com/FewBox/fewbox-web-components#readme",
   "publishConfig": {
     "access": "public"
   },
