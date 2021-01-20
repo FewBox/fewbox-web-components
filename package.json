@@ -31,7 +31,8 @@
     "access": "public"
   },
   "devDependencies": {
-    "@fewbox/react-components": "^0.0.11",
+    "@fewbox/react-components": "^0.0.13",
+    "@microsoft/signalr": "^5.0.2",
     "@svgr/webpack": "^5.4.0",
     "@types/gapi": "^0.0.39",
     "@types/gapi.auth2": "^0.0.52",

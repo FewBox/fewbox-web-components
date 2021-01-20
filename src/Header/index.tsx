@@ -4,7 +4,7 @@ import * as FewBox from '@fewbox/react-components';
 
 export interface IHeaderProps {
     logo: JSX.Element;
-    slogan?: string;
+    slogan?: JSX.Element | string;
 }
 
 export default class Header extends React.Component<IHeaderProps, any> {

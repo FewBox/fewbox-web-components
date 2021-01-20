@@ -30,33 +30,35 @@ class HomePage extends React.Component<IHomePageProps, any> {
             ]} />
           </FewBox.Official.Header>
           <FewBox.Official.Promo type={FewBox.Official.PromoType.Wistia} background={<BackgroundSvg />} />
-          <FewBox.Official.Trusted caption={<FormattedMessage id="Label.Trusted" />}
-            clients={[
-              { name: <FormattedMessage id="Label.Brand" />, logo: <LenovoSvg /> },
-              { name: <FormattedMessage id="Label.Brand" />, logo: <SonySvg /> },
-              { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
-              { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
-            ]} />
-          <FewBox.Official.Product
-            heroTitle={<FormattedMessage id="Label.ProductTitle" />}
-            heroBody={<FormattedMessage id="Label.ProductBody" />}
-            features={[
-              {
-                name: <FormattedMessage id="Label.Feature1Name" />,
-                descriptions: [<FormattedMessage id="Label.Feature1Description" />],
-                image: <Feature1Svg />
-              },
-              {
-                name: <FormattedMessage id="Label.Feature2Name" />,
-                descriptions: [<FormattedMessage id="Label.Feature2Description" />],
-                image: <Feature2Svg />
-              },
-              {
-                name: <FormattedMessage id="Label.Feature3Name" />,
-                descriptions: [<FormattedMessage id="Label.Feature3Description" />],
-                image: <Feature3Svg />
-              }
-            ]} />
+        </FewBox.Layout.Container>
+        <FewBox.Official.Trusted caption={<FormattedMessage id="Label.Trusted" />}
+          clients={[
+            { name: <FormattedMessage id="Label.Brand" />, logo: <LenovoSvg /> },
+            { name: <FormattedMessage id="Label.Brand" />, logo: <SonySvg /> },
+            { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
+            { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
+          ]} />
+        <FewBox.Official.Product
+          heroTitle={<FormattedMessage id="Label.ProductTitle" />}
+          heroBody={<FormattedMessage id="Label.ProductBody" />}
+          features={[
+            {
+              name: <FormattedMessage id="Label.Feature1Name" />,
+              descriptions: [<FormattedMessage id="Label.Feature1Description" />],
+              image: <Feature1Svg />
+            },
+            {
+              name: <FormattedMessage id="Label.Feature2Name" />,
+              descriptions: [<FormattedMessage id="Label.Feature2Description" />],
+              image: <Feature2Svg />
+            },
+            {
+              name: <FormattedMessage id="Label.Feature3Name" />,
+              descriptions: [<FormattedMessage id="Label.Feature3Description" />],
+              image: <Feature3Svg />
+            }
+          ]} />
+        <FewBox.Layout.Container>
           <FewBox.Official.Pricing heroTitle={<FormattedMessage id="Label.PricingTitle" />} heroBody={<FormattedMessage id="Label.PricingBody" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
               { isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },

@@ -1,7 +1,7 @@
 @import '../styles/fewbox-variables';
 
 .fb-pricing{
-    margin: $space-height 0;
+    padding: $pricing-space 0;
     .license {
         position: relative;
         border-style: solid;

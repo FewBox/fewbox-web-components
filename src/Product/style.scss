@@ -1,9 +1,9 @@
 @import "../styles/fewbox-variables";
 
 .fb-product {
-    margin: $space-height 0;
+    padding: $product-space 0;
     .screenshot {
-        margin: $space-height 0;
+        margin: $product-space 0;
         svg {
             height: 180px;
         }
@@ -15,7 +15,7 @@
         text-align: right;
     }
     .spec {
-        margin: $space-height 0;
+        margin: $product-space 0;
     }
     .spec-left {
         text-align: left;
