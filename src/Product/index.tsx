@@ -6,8 +6,7 @@ import * as FewBox from '@fewbox/react-components';
 
 export enum ProductType {
     Normal,
-    FullRow,
-    Card
+    FullRow
 }
 
 export enum TextAlignType {
