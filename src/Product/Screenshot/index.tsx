@@ -12,8 +12,11 @@ export default class ProductScreenshot extends React.Component<IProductScreensho
         if (this.props.textAlignType == TextAlignType.Left) {
             className += ' screenshot-left';
         }
-        else {
+        else if (this.props.textAlignType == TextAlignType.Right) {
             className += ' screenshot-right';
+        }
+        else {
+            className += ' screenshot-center';
         }
         return (
             <div className={className}>

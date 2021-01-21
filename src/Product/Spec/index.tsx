@@ -13,8 +13,11 @@ export default class ProductSpec extends React.Component<IProductSpecProps, any>
         if (this.props.textAlignType == TextAlignType.Left) {
             className += ' spec-left';
         }
-        else {
+        else if (this.props.textAlignType == TextAlignType.Right) {
             className += ' spec-right';
+        }
+        else {
+            className += ' spec-center';
         }
         return (
             <div className={className}>

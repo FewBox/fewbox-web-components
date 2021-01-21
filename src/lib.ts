@@ -4,7 +4,7 @@ import _Pricing, { LicenseType as _LicenseType, PaypalEnvironmentType as _Paypal
 import _Nav from './Nav';
 import _Trusted from './Trusted';
 import _Promo, { PromoType as _PromoType } from './Promo';
-import _Product from './Product';
+import _Product, { ProductType as _ProductType } from './Product';
 
 export namespace Official {
     export const Header = _Header;
@@ -17,4 +17,5 @@ export namespace Official {
     export const Promo = _Promo;
     export const PromoType = _PromoType;
     export const Product = _Product;
+    export const ProductType = _ProductType;
 }

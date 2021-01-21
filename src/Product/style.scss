@@ -14,6 +14,9 @@
     .screenshot-right {
         text-align: right;
     }
+    .screenshot-center {
+        text-align: center;
+    }
     .spec {
         margin: $product-space 0;
     }
@@ -22,5 +25,8 @@
     }
     .spec-right {
         text-align: right;
+    }
+    .spec-center {
+        text-align: center;
     }
 }

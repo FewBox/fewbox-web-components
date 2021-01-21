@@ -927,10 +927,9 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@fewbox/react-components@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.npm.taobao.org/@fewbox/react-components/download/@fewbox/react-components-0.0.13.tgz#7c371850d969f3c678f6b22e798339f816663118"
-  integrity sha1-fDcYUNlp88Z49rIueYM5+BZmMRg=
+"@fewbox/react-components@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.npmjs.org/@fewbox/react-components/-/react-components-0.0.15.tgz#280f81fc739dbbb574af58524d3837de4954c52d"
 
 "@formatjs/ecma402-abstract@^1.2.5":
   version "1.2.5"
@@ -992,7 +991,6 @@
 "@microsoft/signalr@^5.0.2":
   version "5.0.2"
   resolved "https://registry.npm.taobao.org/@microsoft/signalr/download/@microsoft/signalr-5.0.2.tgz#c7ae14f390b54854d317448d473ea3fd99599557"
-  integrity sha1-x64U85C1SFTTF0SNRz6j/ZlZlVc=
   dependencies:
     abort-controller "^3.0.0"
     eventsource "^1.0.7"
@@ -2933,7 +2931,6 @@ es5-ext@^0.10.35, es5-ext@^0.10.50:
 es6-denodeify@^0.1.1:
   version "0.1.5"
   resolved "https://registry.npm.taobao.org/es6-denodeify/download/es6-denodeify-0.1.5.tgz#31d4d5fe9c5503e125460439310e16a2a3f39c1f"
-  integrity sha1-MdTV/pxVA+ElRgQ5MQ4WoqPznB8=
 
 es6-iterator@2.0.3, es6-iterator@~2.0.3:
   version "2.0.3"
@@ -3144,7 +3141,6 @@ faye-websocket@~0.11.1:
 fetch-cookie@^0.7.3:
   version "0.7.3"
   resolved "https://registry.npm.taobao.org/fetch-cookie/download/fetch-cookie-0.7.3.tgz#b8d023f421dd2b2f4a0eca9cd7318a967ed4eed8"
-  integrity sha1-uNAj9CHdKy9KDsqc1zGKln7U7tg=
   dependencies:
     es6-denodeify "^0.1.1"
     tough-cookie "^2.3.3"
@@ -5363,7 +5359,6 @@ prr@~1.0.1:
 psl@^1.1.28:
   version "1.8.0"
   resolved "https://registry.npm.taobao.org/psl/download/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
-  integrity sha1-kyb4vPsBOtzABf3/BWrM4CDlHCQ=
 
 public-encrypt@^4.0.0:
   version "4.0.3"
@@ -6410,7 +6405,6 @@ toidentifier@1.0.0:
 tough-cookie@^2.3.3:
   version "2.5.0"
   resolved "https://registry.npm.taobao.org/tough-cookie/download/tough-cookie-2.5.0.tgz?cache=0&sync_timestamp=1604518822035&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftough-cookie%2Fdownload%2Ftough-cookie-2.5.0.tgz#cd9fb2a0aa1d5a12b473bd9fb96fa3dcff65ade2"
-  integrity sha1-zZ+yoKodWhK0c72fuW+j3P9lreI=
   dependencies:
     psl "^1.1.28"
     punycode "^2.1.1"

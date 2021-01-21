@@ -23,14 +23,14 @@ class HomePage extends React.Component<IHomePageProps, any> {
         <FewBox.Analyze.GA path={(typeof (window) == 'object') ? window.location.pathname : 'unknow'} trackingId="UA-132759085-1" isDebug={true} app="components-demo" />
         <FewBox.Layout.Style />
         <FewBox.Layout.Container>
-          <FewBox.Official.Header logo={<LogoSvg />} slogan="Plugin Cloud">
+          <FewBox.Official.Header logo={<LogoSvg style={{color:"#b4b3b4"}} />} slogan="Plugin Cloud">
             <FewBox.Official.Nav donateLink={<FormattedMessage id="Link.Donate" />} extensionNavLinks={[
               { path: 'feature', caption: <FormattedMessage id="Link.Feature" /> },
               { path: 'pricing', caption: <FormattedMessage id="Link.Pricing" /> }
             ]} />
           </FewBox.Official.Header>
-          <FewBox.Official.Promo type={FewBox.Official.PromoType.Wistia} background={<BackgroundSvg />} />
         </FewBox.Layout.Container>
+        <FewBox.Official.Promo type={FewBox.Official.PromoType.Wistia} background={<BackgroundSvg />} />
         <FewBox.Official.Trusted caption={<FormattedMessage id="Label.Trusted" />}
           clients={[
             { name: <FormattedMessage id="Label.Brand" />, logo: <LenovoSvg /> },
@@ -38,26 +38,29 @@ class HomePage extends React.Component<IHomePageProps, any> {
             { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
           ]} />
-        <FewBox.Official.Product
-          heroTitle={<FormattedMessage id="Label.ProductTitle" />}
-          heroBody={<FormattedMessage id="Label.ProductBody" />}
-          features={[
-            {
-              name: <FormattedMessage id="Label.Feature1Name" />,
-              descriptions: [<FormattedMessage id="Label.Feature1Description" />],
-              image: <Feature1Svg />
-            },
-            {
-              name: <FormattedMessage id="Label.Feature2Name" />,
-              descriptions: [<FormattedMessage id="Label.Feature2Description" />],
-              image: <Feature2Svg />
-            },
-            {
-              name: <FormattedMessage id="Label.Feature3Name" />,
-              descriptions: [<FormattedMessage id="Label.Feature3Description" />],
-              image: <Feature3Svg />
-            }
-          ]} />
+        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#ffffff"}}>
+          <FewBox.Official.Product
+            type={FewBox.Official.ProductType.FullRow}
+            heroTitle={<FormattedMessage id="Label.ProductTitle" />}
+            heroBody={<FormattedMessage id="Label.ProductBody" />}
+            features={[
+              {
+                name: <FormattedMessage id="Label.Feature1Name" />,
+                descriptions: [<FormattedMessage id="Label.Feature1Description" />],
+                image: <Feature1Svg />
+              },
+              {
+                name: <FormattedMessage id="Label.Feature2Name" />,
+                descriptions: [<FormattedMessage id="Label.Feature2Description" />],
+                image: <Feature2Svg />
+              },
+              {
+                name: <FormattedMessage id="Label.Feature3Name" />,
+                descriptions: [<FormattedMessage id="Label.Feature3Description" />],
+                image: <Feature3Svg />
+              }
+            ]} />
+        </FewBox.Layout.Container>
         <FewBox.Layout.Container>
           <FewBox.Official.Pricing heroTitle={<FormattedMessage id="Label.PricingTitle" />} heroBody={<FormattedMessage id="Label.PricingBody" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
