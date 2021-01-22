@@ -34,10 +34,10 @@ export default class Product extends React.Component<IProductProps, any> {
             <div className="fb-product">
                 <Section title={this.props.title} description={this.props.description} />
                 {!!this.props.features && this.props.features.map((feature, featureIndex) => {
-                    let features;
+                    let featureRow;
                     switch (this.props.type) {
                         case ProductType.Normal:
-                            features = <FewBox.Layout.Row key={`feature${featureIndex}`}>
+                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1} />
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 4 : 6}>
                                     {!!(featureIndex % 2 == 0) ? <ProductScreenshot textAlignType={TextAlignType.Right} image={feature.image} /> : <ProductSpec textAlignType={TextAlignType.Right} name={feature.name} descriptions={feature.descriptions} />}
@@ -49,20 +49,24 @@ export default class Product extends React.Component<IProductProps, any> {
                             </FewBox.Layout.Row>
                             break;
                         case ProductType.FullRow:
-                            features = <FewBox.Layout.Row key={`feature${featureIndex}`}>
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
-                                    {!!(featureIndex % 2 == 0) ? <ProductScreenshot textAlignType={TextAlignType.Center} image={feature.image} /> : <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} />}
-                                </FewBox.Layout.Col>
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
-                                    {!!(featureIndex % 2 == 0) ? <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} /> : <ProductScreenshot textAlignType={TextAlignType.Center} image={feature.image} />}
-                                </FewBox.Layout.Col>
+                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
+                                <FewBox.Layout.Row>
+                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                                        <ProductScreenshot textAlignType={TextAlignType.Center} image={feature.image} />
+                                    </FewBox.Layout.Col>
+                                </FewBox.Layout.Row>
+                                <FewBox.Layout.Row>
+                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                                        <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} />
+                                    </FewBox.Layout.Col>
+                                </FewBox.Layout.Row>
                             </FewBox.Layout.Row>
                             break;
                         default:
-                            features = <FewBox.Layout.Row key={`feature${featureIndex}`}></FewBox.Layout.Row>;
+                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}></FewBox.Layout.Row>;
                             break;
                     }
-                    return features;
+                    return featureRow;
                 })}
             </div>
         );
