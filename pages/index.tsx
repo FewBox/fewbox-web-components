@@ -11,7 +11,16 @@ import BackgroundSvg from '../assets/svgs/background.svg';
 import Feature1Svg from '../assets/svgs/feature1.svg';
 import Feature2Svg from '../assets/svgs/feature2.svg';
 import Feature3Svg from '../assets/svgs/feature3.svg';
-import FewBox from './merge';
+import FeatureIcon1Svg from '../assets/svgs/feature-icon1.svg';
+import FeatureIcon2Svg from '../assets/svgs/feature-icon2.svg';
+import FeatureIcon3Svg from '../assets/svgs/feature-icon3.svg';
+import FeatureIcon4Svg from '../assets/svgs/feature-icon4.svg';
+import FeatureIcon5Svg from '../assets/svgs/feature-icon5.svg';
+import FeatureIcon6Svg from '../assets/svgs/feature-icon6.svg';
+import TeamMemberIcon1Svg from '../assets/svgs/team-member-icon1.svg';
+import TeamMemberIcon2Svg from '../assets/svgs/team-member-icon2.svg';
+import TeamMemberIcon3Svg from '../assets/svgs/team-member-icon3.svg';
+import FewBox from './mingle';
 
 export interface IHomePageProps {
 }
@@ -41,8 +50,8 @@ class HomePage extends React.Component<IHomePageProps, any> {
         <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#ffffff"}}>
           <FewBox.Official.Product
             type={FewBox.Official.ProductType.FullRow}
-            heroTitle={<FormattedMessage id="Label.ProductTitle" />}
-            heroBody={<FormattedMessage id="Label.ProductBody" />}
+            title={<FormattedMessage id="Label.ProductTitle" />}
+            description={<FormattedMessage id="Label.ProductDescription" />}
             features={[
               {
                 name: <FormattedMessage id="Label.Feature1Name" />,
@@ -62,7 +71,7 @@ class HomePage extends React.Component<IHomePageProps, any> {
             ]} />
         </FewBox.Layout.Container>
         <FewBox.Layout.Container>
-          <FewBox.Official.Pricing heroTitle={<FormattedMessage id="Label.PricingTitle" />} heroBody={<FormattedMessage id="Label.PricingBody" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
+          <FewBox.Official.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
               { isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
               {
@@ -74,6 +83,23 @@ class HomePage extends React.Component<IHomePageProps, any> {
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Button.Purchase" />
               }
             ]} />
+        </FewBox.Layout.Container>
+        <FewBox.Layout.Container>
+          <FewBox.Official.FeatureGallery title={<FormattedMessage id="Label.FeatureTitle" />} description={<FormattedMessage id="Label.FeatureDescription" />} features={[
+            {icon: <FeatureIcon1Svg/>, title:"Feature 1",description:"Feature 1"},
+            {icon: <FeatureIcon2Svg/>, title:"Feature 2",description:"Feature 2"},
+            {icon: <FeatureIcon3Svg/>, title:"Feature 3",description:"Feature 3"},
+            {icon: <FeatureIcon4Svg/>, title:"Feature 4",description:"Feature 4"},
+            {icon: <FeatureIcon5Svg/>, title:"Feature 5",description:"Feature 5"},
+            {icon: <FeatureIcon6Svg/>, title:"Feature 6",description:"Feature 6"}
+          ]} />
+        </FewBox.Layout.Container>
+        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#ffffff"}}>
+          <FewBox.Official.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
+            {avatar: <TeamMemberIcon1Svg/>, title:"cofounder",description:"Be SMART!"},
+            {avatar: <TeamMemberIcon2Svg/>, title:"cofounder",description:"Be SAMPLE!"},
+            {avatar: <TeamMemberIcon3Svg/>, title:"cofounder",description:"Be SPECIAL!"}
+          ]} />
         </FewBox.Layout.Container>
         <FewBox.Official.Footer logo={<LogoGraySvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />
       </IntlProvider>

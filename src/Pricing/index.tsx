@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Hero from '../Hero';
+import Section from '../Section';
 import Card from './Card';
 import * as FewBox from '@fewbox/react-components';
 
@@ -31,8 +31,8 @@ export interface RegistryLink {
 }
 
 export interface IPricingProps {
-    heroTitle: JSX.Element;
-    heroBody: JSX.Element;
+    title: JSX.Element;
+    description: JSX.Element;
     currenty: string;
     paypalEnvironment: PaypalEnvironmentType;
     paypalBusinessCode: string;
@@ -44,7 +44,7 @@ export default class Pricing extends React.Component<IPricingProps, any> {
     public render() {
         return (
             <div className="fb-pricing">
-                <Hero title={this.props.heroTitle} body={this.props.heroBody} />
+                <Section title={this.props.title} description={this.props.description} />
                 <FewBox.Layout.Row>
                     {this.props.prices.map((price, priceIndex) => {
                         return <FewBox.Layout.Col key={`price${priceIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / this.props.prices.length}>

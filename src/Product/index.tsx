@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Hero from '../Hero';
+import Section from '../Section';
 import ProductScreenshot from './Screenshot';
 import ProductSpec from './Spec';
 import * as FewBox from '@fewbox/react-components';
@@ -23,8 +23,8 @@ export interface Feature {
 
 export interface IProductProps {
     type: ProductType;
-    heroTitle: JSX.Element;
-    heroBody: JSX.Element;
+    title: JSX.Element;
+    description: JSX.Element;
     features: Feature[];
 }
 
@@ -32,7 +32,7 @@ export default class Product extends React.Component<IProductProps, any> {
     public render() {
         return (
             <div className="fb-product">
-                <Hero title={this.props.heroTitle} body={this.props.heroBody} />
+                <Section title={this.props.title} description={this.props.description} />
                 {!!this.props.features && this.props.features.map((feature, featureIndex) => {
                     let features;
                     switch (this.props.type) {

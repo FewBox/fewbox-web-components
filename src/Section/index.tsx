@@ -1,20 +1,20 @@
 import * as React from 'react';
 import * as FewBox from '@fewbox/react-components';
 
-export interface IHeroProps {
+export interface ISectionProps {
     title: JSX.Element;
-    body: JSX.Element;
+    description: JSX.Element;
 }
 
-export default class Hero extends React.Component<IHeroProps, any> {
+export default class Section extends React.Component<ISectionProps, any> {
     public render() {
         return (
-            <div className="fb-hero">
+            <div className="fb-section">
                 <FewBox.Layout.Row textAlignType={FewBox.Layout.RowTextAlignType.Center}>
                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={2} />
                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={8}>
                         <h1>{this.props.title}</h1>
-                        <p className="body">{this.props.body}</p>
+                        <p>{this.props.description}</p>
                     </FewBox.Layout.Col>
                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={2} />
                 </FewBox.Layout.Row>

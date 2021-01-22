@@ -5,6 +5,8 @@ import _Nav from './Nav';
 import _Trusted from './Trusted';
 import _Promo, { PromoType as _PromoType } from './Promo';
 import _Product, { ProductType as _ProductType } from './Product';
+import _FeatureGallery from './FeatureGallery';
+import _Team from './Team';
 
 export namespace Official {
     export const Header = _Header;
@@ -18,4 +20,6 @@ export namespace Official {
     export const PromoType = _PromoType;
     export const Product = _Product;
     export const ProductType = _ProductType;
+    export const FeatureGallery = _FeatureGallery;
+    export const Team = _Team;
 }
