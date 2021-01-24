@@ -12,7 +12,7 @@ module.exports = merge(common, {
                 {
                     from: 'src/**/*.scss',
                     to({ context, absoluteFilename }) {
-                        return `${path.relative(context, absoluteFilename).split("src\\").join("")}`;
+                        return `${path.relative(context, absoluteFilename).split("src\\").join("").split("src/").join("")}`;
                     }
                 }
             ]
