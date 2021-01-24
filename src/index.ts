@@ -1,7 +1,3 @@
-import _Style from './Style';
-
-export namespace VI {
-    export const Style = _Style;
-}
+import './theme/_fewbox-default.scss';
 
 export * from './lib';

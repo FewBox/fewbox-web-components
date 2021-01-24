@@ -24,6 +24,24 @@ module.exports = {
             },
             use: ['@svgr/webpack'],
         });
+        /*config.module.rules.push({
+            test: /\.(sa|sc)ss$/,
+            include: [path.resolve(__dirname, 'src')],
+            use: [
+                'style-loader',
+                'css-loader',
+                'postcss-loader',
+                {
+                    loader: 'sass-loader',
+                    options: {
+                        prependData: (loaderContext) => {
+                            return `@import 'src/theme/custom.scss';`;
+                        },
+                        sourceMap: true,
+                    },
+                },
+            ],
+        });*/
         return config;
     }
 }

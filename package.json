@@ -1,6 +1,6 @@
 {
   "name": "@fewbox/web-components",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "FewBox Web Components lib.",
   "main": "dist/index.js",
   "files": [
@@ -41,13 +41,14 @@
     "@types/react-router": "^5.0.0",
     "@types/react-router-dom": "^4.3.3",
     "clean-webpack-plugin": "^2.0.2",
-    "copy-webpack-plugin": "^5.0.3",
+    "copy-webpack-plugin": "^7.0.0",
     "core-decorators": "^0.20.0",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^0.6.0",
     "next": "^9.5.5",
+    "postcss-loader": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
@@ -58,11 +59,11 @@
     "ts-loader": "^8.0.4",
     "typescript": "^4.0.3",
     "url-loader": "^4.1.0",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1",
-    "webpack-merge": "^4.2.1",
-    "webpack-node-externals": "^1.7.2"
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {},
   "peerDependencies": {}
