@@ -1,3 +1,3 @@
-import './theme/_fewbox-default.scss';
+import '../theme/_fewbox-default.scss';
 
 export * from './lib';
