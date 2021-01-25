@@ -25,7 +25,7 @@ export default class Team extends React.Component<ITeamProps, any> {
             let cols: JSX.Element[] = [];
             for (let colIndex = 1; colIndex <= colCount; colIndex++) {
                 if (teamMemberIndex <= this.props.teamMembers.length) {
-                    let col = <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
+                    let col = <FewBox.Layout.Col key={`teamMemberRow${rowIndex}Col${colIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
                         <Card teamMember={this.props.teamMembers[teamMemberIndex - 1]} />
                     </FewBox.Layout.Col>;
                     cols.push(col);

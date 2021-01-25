@@ -1,3 +1,5 @@
+@import 'theme/fewbox-variables';
+
 .fb-footer {
     width: 100%;
     text-align: center;
@@ -11,6 +13,7 @@
         .logo {
             margin: 0 auto 0 auto;
             svg {
+                color: $footer-logo-color;
                 height:15px;
             }
         }

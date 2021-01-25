@@ -2,7 +2,6 @@ import * as React from 'react';
 import { FormattedMessage, IntlProvider } from 'react-intl';
 import langs from '../langs';
 import LogoSvg from '../assets/svgs/logo.svg';
-import LogoGraySvg from '../assets/svgs/logo-gray.svg';
 import LenovoSvg from '../assets/svgs/lenovo.svg';
 import SonySvg from '../assets/svgs/sony.svg';
 import TempurSealySvg from '../assets/svgs/tempursealy.svg';
@@ -32,14 +31,14 @@ class HomePage extends React.Component<IHomePageProps, any> {
         <FewBox.Analyze.GA path={(typeof (window) == 'object') ? window.location.pathname : 'unknow'} trackingId="UA-132759085-1" isDebug={true} app="components-demo" />
         <FewBox.Layout.Style />
         <FewBox.Layout.Container>
-          <FewBox.Official.Header logo={<LogoSvg style={{color:"#b4b3b4"}} />} slogan="Plugin Cloud">
+          <FewBox.Official.Header logo={<LogoSvg />} slogan={<FormattedMessage id="Link.Slogan" />}>
             <FewBox.Official.Nav donateLink={<FormattedMessage id="Link.Donate" />} extensionNavLinks={[
               { path: 'feature', caption: <FormattedMessage id="Link.Feature" /> },
               { path: 'pricing', caption: <FormattedMessage id="Link.Pricing" /> }
             ]} />
           </FewBox.Official.Header>
         </FewBox.Layout.Container>
-        <FewBox.Official.Promo type={FewBox.Official.PromoType.Wistia} background={<BackgroundSvg />} />
+        <FewBox.Official.Promo type={FewBox.Official.PromoType.Hero} background={<BackgroundSvg />} />
         <FewBox.Official.Trusted caption={<FormattedMessage id="Label.Trusted" />}
           clients={[
             { name: <FormattedMessage id="Label.Brand" />, logo: <LenovoSvg /> },
@@ -47,7 +46,7 @@ class HomePage extends React.Component<IHomePageProps, any> {
             { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
           ]} />
-        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#ffffff"}}>
+        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
           <FewBox.Official.Product
             type={FewBox.Official.ProductType.FullRow}
             title={<FormattedMessage id="Label.ProductTitle" />}
@@ -56,17 +55,23 @@ class HomePage extends React.Component<IHomePageProps, any> {
               {
                 name: <FormattedMessage id="Label.Feature1Name" />,
                 descriptions: [<FormattedMessage id="Label.Feature1Description" />],
-                image: <Feature1Svg />
+                image: <Feature1Svg />,
+                moreCaption: <FormattedMessage id="Label.More" />,
+                morePath: 'feature'
               },
               {
                 name: <FormattedMessage id="Label.Feature2Name" />,
                 descriptions: [<FormattedMessage id="Label.Feature2Description" />],
-                image: <Feature2Svg />
+                image: <Feature2Svg />,
+                moreCaption: <FormattedMessage id="Label.More" />,
+                morePath: 'feature'
               },
               {
                 name: <FormattedMessage id="Label.Feature3Name" />,
                 descriptions: [<FormattedMessage id="Label.Feature3Description" />],
-                image: <Feature3Svg />
+                image: <Feature3Svg />,
+                moreCaption: <FormattedMessage id="Label.More" />,
+                morePath: 'feature'
               }
             ]} />
         </FewBox.Layout.Container>
@@ -86,22 +91,58 @@ class HomePage extends React.Component<IHomePageProps, any> {
         </FewBox.Layout.Container>
         <FewBox.Layout.Container>
           <FewBox.Official.FeatureGallery title={<FormattedMessage id="Label.FeatureTitle" />} description={<FormattedMessage id="Label.FeatureDescription" />} features={[
-            {icon: <FeatureIcon1Svg/>, title:"Feature 1",description:"Feature 1"},
-            {icon: <FeatureIcon2Svg/>, title:"Feature 2",description:"Feature 2"},
-            {icon: <FeatureIcon3Svg/>, title:"Feature 3",description:"Feature 3"},
-            {icon: <FeatureIcon4Svg/>, title:"Feature 4",description:"Feature 4"},
-            {icon: <FeatureIcon5Svg/>, title:"Feature 5",description:"Feature 5"},
-            {icon: <FeatureIcon6Svg/>, title:"Feature 6",description:"Feature 6"}
+            {
+              icon: <FeatureIcon1Svg/>,
+              title:"Feature 1",
+              description:"Feature 1",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            },
+            {
+              icon: <FeatureIcon2Svg/>,
+              title:"Feature 2",
+              description:"Feature 2",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            },
+            {
+              icon: <FeatureIcon3Svg/>,
+              title:"Feature 3",
+              description:"Feature 3",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            },
+            {
+              icon: <FeatureIcon4Svg/>,
+              title:"Feature 4",
+              description:"Feature 4",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            },
+            {
+              icon: <FeatureIcon5Svg/>,
+              title:"Feature 5",
+              description:"Feature 5",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            },
+            {
+              icon: <FeatureIcon6Svg/>,
+              title:"Feature 6",
+              description:"Feature 6",
+              moreCaption: <FormattedMessage id="Label.More" />,
+              morePath: 'feature'
+            }
           ]} />
         </FewBox.Layout.Container>
-        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#ffffff"}}>
+        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
           <FewBox.Official.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
             {avatar: <TeamMemberIcon1Svg/>, title:"cofounder",description:"Be SMART!"},
             {avatar: <TeamMemberIcon2Svg/>, title:"cofounder",description:"Be SAMPLE!"},
             {avatar: <TeamMemberIcon3Svg/>, title:"cofounder",description:"Be SPECIAL!"}
           ]} />
         </FewBox.Layout.Container>
-        <FewBox.Official.Footer logo={<LogoGraySvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />
+        <FewBox.Official.Footer logo={<LogoSvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />
       </IntlProvider>
     );
   }

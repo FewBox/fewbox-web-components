@@ -11,7 +11,7 @@ export default class Wistia extends React.Component<IWistiaProps, any> {
                 <div className="image wistia_embed wistia_async_0i7awk8ja9 popover=true popoverAnimateThumbnail=true popoverContent=link" id="wistia-0i7awk8ja9-1">
                     <div id="wistia_31.thumb_container" className="wistia_click_to_play">
                         <a href="" target="_blank">
-                            <div className="background">{this.props.background}</div>
+                            {this.props.background}
                         </a>
                     </div>
                     <script src="https://fast.wistia.com/embed/medias/0i7awk8ja9.jsonp" async></script>

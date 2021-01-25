@@ -1,7 +1,10 @@
+@import 'theme/fewbox-variables';
+
 .fb-feature-gallery-card {
     .icon {
         svg {
-            height: 128px;
+            color: $feature-gallery-color;
+            height: 64px;
         }
     }
 }

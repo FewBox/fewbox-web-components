@@ -7,6 +7,8 @@ export interface Feature {
     icon: JSX.Element;
     title: string;
     description: string;
+    moreCaption?: string;
+    morePath?: string;
 }
 
 export interface IFeatureGalleryProps {
@@ -25,7 +27,7 @@ export default class FeatureGallery extends React.Component<IFeatureGalleryProps
             let cols: JSX.Element[] = [];
             for (let colIndex = 1; colIndex <= colCount; colIndex++) {
                 if (featureIndex <= this.props.features.length) {
-                    let col = <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
+                    let col = <FewBox.Layout.Col key={`featureRow${rowIndex}Col${colIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
                         <Card feature={this.props.features[featureIndex - 1]} />
                     </FewBox.Layout.Col>;
                     cols.push(col);

@@ -1,11 +1,13 @@
-@import 'src/theme/fewbox-variables';
+@import 'theme/fewbox-variables';
 
 .fb-product {
     padding: $product-space 0;
     .screenshot {
-        margin: $product-space 0;
+        margin: $product-screenshot-space 0;
         svg {
-            height: 180px;
+            border-radius: $product-screenshot-radius;
+            box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+            height: $product-screenshot-height;
         }
     }
     .screenshot-left {
@@ -18,7 +20,7 @@
         text-align: center;
     }
     .spec {
-        margin: $product-space 0;
+        margin: $product-spec-space 0;
     }
     .spec-left {
         text-align: left;

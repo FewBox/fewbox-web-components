@@ -1,8 +1,10 @@
 export default {
+    'Link.Slogan': 'FewBox',
     'Link.Feature': 'Feature',
     'Link.Pricing': 'Pricing',
     'Link.Donate': '👍 Donate',
     'Link.Registry': 'Registry',
+    'Label.More': 'More',
     'Label.FreeLicense': 'Free',
     'Label.MonthlyLicense': 'Monthly',
     'Label.YearlyLicense': 'Yearly',

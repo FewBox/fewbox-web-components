@@ -19,6 +19,8 @@ export interface Feature {
     name: JSX.Element;
     descriptions: JSX.Element[];
     image: JSX.Element;
+    moreCaption?: string;
+    morePath?: string;
 }
 
 export interface IProductProps {
@@ -40,10 +42,10 @@ export default class Product extends React.Component<IProductProps, any> {
                             featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1} />
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 4 : 6}>
-                                    {!!(featureIndex % 2 == 0) ? <ProductScreenshot textAlignType={TextAlignType.Right} image={feature.image} /> : <ProductSpec textAlignType={TextAlignType.Right} name={feature.name} descriptions={feature.descriptions} />}
+                                    {!!(featureIndex % 2 == 0) ? <ProductScreenshot textAlignType={TextAlignType.Right} image={feature.image} /> : <ProductSpec textAlignType={TextAlignType.Right} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} />}
                                 </FewBox.Layout.Col>
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 6 : 4}>
-                                    {!!(featureIndex % 2 == 0) ? <ProductSpec textAlignType={TextAlignType.Left} name={feature.name} descriptions={feature.descriptions} /> : <ProductScreenshot textAlignType={TextAlignType.Left} image={feature.image} />}
+                                    {!!(featureIndex % 2 == 0) ? <ProductSpec textAlignType={TextAlignType.Left} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} /> : <ProductScreenshot textAlignType={TextAlignType.Left} image={feature.image} />}
                                 </FewBox.Layout.Col>
                                 <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1} />
                             </FewBox.Layout.Row>
@@ -57,7 +59,7 @@ export default class Product extends React.Component<IProductProps, any> {
                                 </FewBox.Layout.Row>
                                 <FewBox.Layout.Row>
                                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
-                                        <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} />
+                                        <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} />
                                     </FewBox.Layout.Col>
                                 </FewBox.Layout.Row>
                             </FewBox.Layout.Row>
