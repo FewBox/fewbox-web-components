@@ -53,9 +53,11 @@ export default class Product extends React.Component<IProductProps, any> {
                         case ProductType.FullRow:
                             featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
                                 <FewBox.Layout.Row>
-                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1}></FewBox.Layout.Col>
+                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={10}>
                                         <ProductScreenshot textAlignType={TextAlignType.Center} image={feature.image} />
                                     </FewBox.Layout.Col>
+                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1}></FewBox.Layout.Col>
                                 </FewBox.Layout.Row>
                                 <FewBox.Layout.Row>
                                     <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
