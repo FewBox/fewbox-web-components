@@ -21,6 +21,9 @@
     }
     .spec {
         margin: $product-spec-space 0;
+        a {
+            font-weight: bold;
+        }
     }
     .spec-left {
         text-align: left;

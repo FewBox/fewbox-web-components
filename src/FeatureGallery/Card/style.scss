@@ -1,10 +1,14 @@
-@import 'theme/fewbox-variables';
+@import "theme/fewbox-variables";
 
 .fb-feature-gallery-card {
+    padding: 40px 0;
     .icon {
         svg {
             color: $feature-gallery-color;
             height: 64px;
         }
+    }
+    a {
+        font-weight: bold;
     }
 }
