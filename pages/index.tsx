@@ -7,9 +7,6 @@ import SonySvg from '../assets/svgs/sony.svg';
 import TempurSealySvg from '../assets/svgs/tempursealy.svg';
 import BoostSolutionsSvg from '../assets/svgs/boostsolutions.svg';
 import BackgroundSvg from '../assets/svgs/background.svg';
-import Feature1Svg from '../assets/svgs/feature1.svg';
-import Feature2Svg from '../assets/svgs/feature2.svg';
-import Feature3Svg from '../assets/svgs/feature3.svg';
 import FeatureIcon1Svg from '../assets/svgs/feature-icon1.svg';
 import FeatureIcon2Svg from '../assets/svgs/feature-icon2.svg';
 import FeatureIcon3Svg from '../assets/svgs/feature-icon3.svg';
@@ -55,21 +52,14 @@ class HomePage extends React.Component<IHomePageProps, any> {
               {
                 name: <FormattedMessage id="Label.Feature1Name" />,
                 descriptions: [<FormattedMessage id="Label.Feature1Description" />],
-                image: <Feature1Svg />,
+                image: <img src="/images/feature1.png" />,
                 moreCaption: <FormattedMessage id="Label.More" />,
                 morePath: 'feature'
               },
               {
                 name: <FormattedMessage id="Label.Feature2Name" />,
                 descriptions: [<FormattedMessage id="Label.Feature2Description" />],
-                image: <Feature2Svg />,
-                moreCaption: <FormattedMessage id="Label.More" />,
-                morePath: 'feature'
-              },
-              {
-                name: <FormattedMessage id="Label.Feature3Name" />,
-                descriptions: [<FormattedMessage id="Label.Feature3Description" />],
-                image: <Feature3Svg />,
+                image: <img src="/images/feature2.png" />,
                 moreCaption: <FormattedMessage id="Label.More" />,
                 morePath: 'feature'
               }

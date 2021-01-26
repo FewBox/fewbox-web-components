@@ -24,9 +24,9 @@ export default class ProductSpec extends React.Component<IProductSpecProps, any>
         }
         return (
             <div className={className}>
-                <div>
+                <h2>
                     {this.props.name}
-                </div>
+                </h2>
                 <div>
                     {!!this.props.descriptions && this.props.descriptions.map((description, descriptionIndex) => {
                         return <p key={`description${descriptionIndex}`}>{description}</p>;
