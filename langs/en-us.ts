@@ -25,5 +25,8 @@ export default {
     'Label.FeatureDescription': 'We provide Smart, Simple products and Extentions to our clients.',
     'Label.TeamTitle': 'Teams',
     'Label.TeamDescription': 'WHO WE ARE',
-    'Button.Purchase': 'Purchase'
+    'Label.Purchase': 'Purchase',
+    'Label.FreeLicenseUnit': '',
+    'Label.MonthlyLicenseUnit': '/month',
+    'Label.YearlyLicenseUnit': 'year'
 }

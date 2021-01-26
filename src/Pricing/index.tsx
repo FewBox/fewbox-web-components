@@ -23,6 +23,7 @@ export interface Price {
     description: JSX.Element;
     purchase?: JSX.Element;
     subscribeType: string;
+    unit: JSX.Element;
 }
 
 export interface RegistryLink {
@@ -48,7 +49,7 @@ export default class Pricing extends React.Component<IPricingProps, any> {
                 <FewBox.Layout.Row>
                     {this.props.prices.map((price, priceIndex) => {
                         return <FewBox.Layout.Col key={`price${priceIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / this.props.prices.length}>
-                            <Card subscribeType={price.subscribeType} purchase={price.purchase} currenty={this.props.currenty} paypalBusinessCode={this.props.paypalBusinessCode} paypalEnvironment={this.props.paypalEnvironment} isRecommended={price.isRecommended} licenseType={price.licenseType} licenseCaption={price.licenseCaption} originalPrice={price.originalPrice} discountedPrice={price.discountedPrice} description={price.description} registryLink={this.props.registryLink} />
+                            <Card unit={price.unit} subscribeType={price.subscribeType} purchase={price.purchase} currenty={this.props.currenty} paypalBusinessCode={this.props.paypalBusinessCode} paypalEnvironment={this.props.paypalEnvironment} isRecommended={price.isRecommended} licenseType={price.licenseType} licenseCaption={price.licenseCaption} originalPrice={price.originalPrice} discountedPrice={price.discountedPrice} description={price.description} registryLink={this.props.registryLink} />
                         </FewBox.Layout.Col>
                     })}
                 </FewBox.Layout.Row>

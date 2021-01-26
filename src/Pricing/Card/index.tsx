@@ -16,6 +16,7 @@ export interface IPricingCardProps {
     registryLink: RegistryLink;
     purchase?: JSX.Element;
     subscribeType: string;
+    unit: JSX.Element;
 }
 
 export default class PricingCard extends React.Component<IPricingCardProps, any> {
@@ -26,7 +27,7 @@ export default class PricingCard extends React.Component<IPricingCardProps, any>
                 <div className="type">{this.props.licenseCaption}</div>
                 <div className="splitLine"></div>
                 <div className="price">
-                    <span className="currency">{this.props.currenty}</span>{!!this.props.originalPrice && <span className="originalPrice">{this.props.originalPrice}</span>}<span className="discountedPrice">{this.props.discountedPrice}</span><span className="period">/year</span>
+                    <span className="currency">{this.props.currenty}</span>{!!this.props.originalPrice && <span className="originalPrice">{this.props.originalPrice}</span>}<span className="discountedPrice">{this.props.discountedPrice}</span><span className="period">{this.props.unit}</span>
                 </div>
                 <div className="description">
                     {this.props.description}

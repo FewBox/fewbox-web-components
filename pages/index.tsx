@@ -68,13 +68,13 @@ class HomePage extends React.Component<IHomePageProps, any> {
         <FewBox.Layout.Container>
           <FewBox.Official.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
-              { isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
+              { unit: <FormattedMessage id="Label.FreeLicenseUnit" />, isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
               {
-                subscribeType: "Monthly", isRecommended: false, licenseType: FewBox.Official.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
+                unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: FewBox.Official.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Button.Purchase" />
               },
               {
-                subscribeType: "Yearly", isRecommended: true, licenseType: FewBox.Official.LicenseType.Yearly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "478.8", discountedPrice: "199.9", description: <div><p><b>Customized</b> search filter support</p>
+                unit: <FormattedMessage id="Label.YearlyLicenseUnit" />, subscribeType: "Yearly", isRecommended: true, licenseType: FewBox.Official.LicenseType.Yearly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "478.8", discountedPrice: "199.9", description: <div><p><b>Customized</b> search filter support</p>
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Button.Purchase" />
               }
             ]} />
