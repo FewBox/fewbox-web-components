@@ -19,7 +19,7 @@ export interface Feature {
     name: JSX.Element;
     descriptions: JSX.Element[];
     image: JSX.Element;
-    moreCaption?: string;
+    moreCaption?: JSX.Element;
     morePath?: string;
 }
 

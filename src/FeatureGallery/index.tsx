@@ -5,9 +5,9 @@ import * as FewBox from '@fewbox/react-components';
 
 export interface Feature {
     icon: JSX.Element;
-    title: string;
-    description: string;
-    moreCaption?: string;
+    title: JSX.Element;
+    description: JSX.Element;
+    moreCaption?: JSX.Element;
     morePath?: string;
 }
 

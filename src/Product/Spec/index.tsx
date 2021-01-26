@@ -6,7 +6,7 @@ export interface IProductSpecProps {
     textAlignType: TextAlignType;
     name: JSX.Element;
     descriptions: JSX.Element[];
-    moreCaption?: string;
+    moreCaption?: JSX.Element;
     morePath?: string;
 }
 
