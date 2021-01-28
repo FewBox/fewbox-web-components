@@ -3,10 +3,16 @@ import Section from '../Section';
 import Card from './Card';
 import * as FewBox from '@fewbox/react-components';
 
+export interface SocialAccount {
+    icon: JSX.Element;
+    link: string;
+}
+
 export interface TeamMember {
     avatar: JSX.Element;
     title: string;
-    description: string;
+    description?: string;
+    socialAccounts?: SocialAccount[];
 }
 
 export interface ITeamProps {

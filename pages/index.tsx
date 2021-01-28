@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { FormattedMessage, IntlProvider } from 'react-intl';
 import langs from '../langs';
+import EmailSvg from '../assets/svgs/email.svg';
 import LogoSvg from '../assets/svgs/logo.svg';
 import LenovoSvg from '../assets/svgs/lenovo.svg';
 import SonySvg from '../assets/svgs/sony.svg';
@@ -71,11 +72,11 @@ class HomePage extends React.Component<IHomePageProps, any> {
               { unit: <FormattedMessage id="Label.FreeLicenseUnit" />, isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
               {
                 unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: FewBox.Official.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
-                  <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Button.Purchase" />
+                  <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Label.Purchase" />
               },
               {
                 unit: <FormattedMessage id="Label.YearlyLicenseUnit" />, subscribeType: "Yearly", isRecommended: true, licenseType: FewBox.Official.LicenseType.Yearly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "478.8", discountedPrice: "199.9", description: <div><p><b>Customized</b> search filter support</p>
-                  <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Button.Purchase" />
+                  <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Label.Purchase" />
               }
             ]} />
         </FewBox.Layout.Container>
@@ -127,9 +128,12 @@ class HomePage extends React.Component<IHomePageProps, any> {
         </FewBox.Layout.Container>
         <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
           <FewBox.Official.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
-            {avatar: <TeamMemberIcon1Svg/>, title:"cofounder",description:"Be SMART!"},
-            {avatar: <TeamMemberIcon2Svg/>, title:"cofounder",description:"Be SAMPLE!"},
-            {avatar: <TeamMemberIcon3Svg/>, title:"cofounder",description:"Be SPECIAL!"}
+            {avatar: <TeamMemberIcon1Svg/>, title:"Cofounder",description:"Be SMART!",
+            socialAccounts:[
+              {icon:<EmailSvg />, link: 'mailto://xl@fewbox.com'}
+            ]},
+            {avatar: <TeamMemberIcon2Svg/>, title:"Cofounder",description:"Be SAMPLE!"},
+            {avatar: <TeamMemberIcon3Svg/>, title:"Cofounder",description:"Be SPECIAL!"}
           ]} />
         </FewBox.Layout.Container>
         <FewBox.Official.Footer logo={<LogoSvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />

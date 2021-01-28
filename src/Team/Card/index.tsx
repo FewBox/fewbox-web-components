@@ -10,8 +10,14 @@ export default class TeamCard extends React.Component<ITeamCardProps, any> {
         return (
             <div className="fb-team-card">
                 <div className="icon">{this.props.teamMember.avatar}</div>
-                <h3>{this.props.teamMember.title}</h3>
-                <p>{this.props.teamMember.description}</p>
+                <div className="title">{this.props.teamMember.title}</div>
+                {!!this.props.teamMember.description && <div className="description">{this.props.teamMember.description}</div>}
+                {!!this.props.teamMember.socialAccounts &&
+                    <ul className="social">
+                        {this.props.teamMember.socialAccounts.map((socialAccount, socialAccountIndex) => {
+                            return <li key={`socialAccount${socialAccountIndex}`}><a href={socialAccount.link} target="_blank">{socialAccount.icon}</a></li>
+                        })}
+                    </ul>}
             </div>
         );
     }

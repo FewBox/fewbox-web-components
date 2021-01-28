@@ -1,7 +1,31 @@
+@import "theme/fewbox-variables";
+
 .fb-team-card {
     .icon {
         svg {
-            height: 128px;
+            height: $team-avatar-size;
+        }
+    }
+    .title {
+        margin: 6px 0;
+        font-size: $team-title-size;
+    }
+    .description {
+        font-size: $team-description-size;
+    }
+    .social {
+        list-style: none;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        display: inline-block;
+        li {
+            float: left;
+            text-align: center;
+            margin: 0 6px 3px 6px;
+            svg {
+                height: $team-social-account-size;
+                color: $team-social-account-color;
+            }
         }
     }
 }
