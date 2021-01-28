@@ -1,6 +1,6 @@
 {
   "name": "@fewbox/web-components",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "FewBox Web Components lib.",
   "main": "dist/index.js",
   "files": [
