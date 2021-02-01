@@ -17,7 +17,8 @@ import FeatureIcon6Svg from '../assets/svgs/feature-icon6.svg';
 import TeamMemberIcon1Svg from '../assets/svgs/team-member-icon1.svg';
 import TeamMemberIcon2Svg from '../assets/svgs/team-member-icon2.svg';
 import TeamMemberIcon3Svg from '../assets/svgs/team-member-icon3.svg';
-import FewBox from './mingle';
+import { Base } from '@fewbox/react-components';
+import { Web } from '../src/next';
 
 export interface IHomePageProps {
 }
@@ -26,27 +27,27 @@ class HomePage extends React.Component<IHomePageProps, any> {
   public render() {
     return (
       <IntlProvider locale={'en'} messages={langs('en-us')}>
-        <FewBox.Analyze.GA path={(typeof (window) == 'object') ? window.location.pathname : 'unknow'} trackingId="UA-132759085-1" isDebug={true} app="components-demo" />
-        <FewBox.Layout.Style />
-        <FewBox.Layout.Container>
-          <FewBox.Official.Header logo={<LogoSvg />} slogan={<FormattedMessage id="Link.Slogan" />}>
-            <FewBox.Official.Nav donateLink={<FormattedMessage id="Link.Donate" />} extensionNavLinks={[
+        <Base.Analyze.GA path={(typeof (window) == 'object') ? window.location.pathname : 'unknow'} trackingId="UA-132759085-1" isDebug={true} app="components-demo" />
+        <Base.Layout.Style />
+        <Base.Layout.Container>
+          <Web.UI.Header logo={<LogoSvg />} slogan={<FormattedMessage id="Link.Slogan" />}>
+            <Web.UI.Nav donateLink={<FormattedMessage id="Link.Donate" />} extensionNavLinks={[
               { path: 'feature', caption: <FormattedMessage id="Link.Feature" /> },
               { path: 'pricing', caption: <FormattedMessage id="Link.Pricing" /> }
             ]} />
-          </FewBox.Official.Header>
-        </FewBox.Layout.Container>
-        <FewBox.Official.Promo type={FewBox.Official.PromoType.Hero} background={<BackgroundSvg />} />
-        <FewBox.Official.Trusted caption={<FormattedMessage id="Label.Trusted" />}
+          </Web.UI.Header>
+        </Base.Layout.Container>
+        <Web.UI.Promo type={Web.UI.PromoType.Hero} background={<BackgroundSvg />} />
+        <Web.UI.Trusted caption={<FormattedMessage id="Label.Trusted" />}
           clients={[
             { name: <FormattedMessage id="Label.Brand" />, logo: <LenovoSvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <SonySvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
           ]} />
-        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
-          <FewBox.Official.Product
-            type={FewBox.Official.ProductType.FullRow}
+        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
+          <Web.UI.Product
+            type={Web.UI.ProductType.FullRow}
             title={<FormattedMessage id="Label.ProductTitle" />}
             description={<FormattedMessage id="Label.ProductDescription" />}
             features={[
@@ -65,23 +66,24 @@ class HomePage extends React.Component<IHomePageProps, any> {
                 morePath: 'feature'
               }
             ]} />
-        </FewBox.Layout.Container>
-        <FewBox.Layout.Container>
-          <FewBox.Official.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={FewBox.Official.PaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
+        </Base.Layout.Container>
+        <Base.Layout.Container>
+          <Web.UI.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={Web.UI.PricePaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
-              { unit: <FormattedMessage id="Label.FreeLicenseUnit" />, isRecommended: false, licenseType: FewBox.Official.LicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
+              { 
+                unit: <FormattedMessage id="Label.FreeLicenseUnit" />, isRecommended: false, licenseType: Web.UI.PricingLicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
               {
-                unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: FewBox.Official.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
+                unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: Web.UI.PricingLicenseType.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Label.Purchase" />
               },
               {
-                unit: <FormattedMessage id="Label.YearlyLicenseUnit" />, subscribeType: "Yearly", isRecommended: true, licenseType: FewBox.Official.LicenseType.Yearly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "478.8", discountedPrice: "199.9", description: <div><p><b>Customized</b> search filter support</p>
+                unit: <FormattedMessage id="Label.YearlyLicenseUnit" />, subscribeType: "Yearly", isRecommended: true, licenseType: Web.UI.PricingLicenseType.Yearly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "478.8", discountedPrice: "199.9", description: <div><p><b>Customized</b> search filter support</p>
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Label.Purchase" />
               }
             ]} />
-        </FewBox.Layout.Container>
-        <FewBox.Layout.Container>
-          <FewBox.Official.FeatureGallery title={<FormattedMessage id="Label.FeatureTitle" />} description={<FormattedMessage id="Label.FeatureDescription" />} features={[
+        </Base.Layout.Container>
+        <Base.Layout.Container>
+          <Web.UI.FeatureGallery title={<FormattedMessage id="Label.FeatureTitle" />} description={<FormattedMessage id="Label.FeatureDescription" />} features={[
             {
               icon: <FeatureIcon1Svg/>,
               title:"Feature 1",
@@ -125,9 +127,9 @@ class HomePage extends React.Component<IHomePageProps, any> {
               morePath: 'feature'
             }
           ]} />
-        </FewBox.Layout.Container>
-        <FewBox.Layout.Container type={FewBox.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
-          <FewBox.Official.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
+        </Base.Layout.Container>
+        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
+          <Web.UI.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
             {avatar: <TeamMemberIcon1Svg/>, title:"Cofounder",description:"Be SMART!",
             socialAccounts:[
               {icon:<EmailSvg />, link: 'mailto://xl@fewbox.com'}
@@ -135,8 +137,8 @@ class HomePage extends React.Component<IHomePageProps, any> {
             {avatar: <TeamMemberIcon2Svg/>, title:"Cofounder",description:"Be SAMPLE!"},
             {avatar: <TeamMemberIcon3Svg/>, title:"Cofounder",description:"Be SPECIAL!"}
           ]} />
-        </FewBox.Layout.Container>
-        <FewBox.Official.Footer logo={<LogoSvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />
+        </Base.Layout.Container>
+        <Web.UI.Footer logo={<LogoSvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />
       </IntlProvider>
     );
   }

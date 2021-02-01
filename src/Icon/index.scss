@@ -1,0 +1,8 @@
+@import "theme/fewbox-variables";
+
+.fb-icon {
+    svg{
+        color: $icon-color;
+        height: $icon-size;
+    }
+}

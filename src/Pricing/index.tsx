@@ -3,20 +3,20 @@ import Section from '../Section';
 import Card from './Card';
 import * as FewBox from '@fewbox/react-components';
 
-export enum LicenseType {
+export enum PricingLicenseType {
     Free,
     Monthly,
     Yearly,
 }
 
-export enum PaypalEnvironmentType {
+export enum PricingPaypalEnvironmentType {
     Sandbox,
     Production,
 }
 
 export interface Price {
     isRecommended: boolean;
-    licenseType: LicenseType;
+    licenseType: PricingLicenseType;
     licenseCaption: JSX.Element;
     originalPrice?: string;
     discountedPrice: string;
@@ -35,7 +35,7 @@ export interface IPricingProps {
     title: JSX.Element;
     description: JSX.Element;
     currenty: string;
-    paypalEnvironment: PaypalEnvironmentType;
+    paypalEnvironment: PricingPaypalEnvironmentType;
     paypalBusinessCode: string;
     prices: Price[];
     registryLink: RegistryLink;
