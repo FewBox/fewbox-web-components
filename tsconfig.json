@@ -35,5 +35,6 @@
     "custom.d.ts"
   ],
   "exclude": [
+    "src/next.ts"
   ]
 }

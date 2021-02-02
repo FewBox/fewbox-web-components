@@ -931,9 +931,9 @@
   version "0.5.2"
   resolved "https://registry.npm.taobao.org/@discoveryjs/json-ext/download/@discoveryjs/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
 
-"@fewbox/react-components@^0.0.16":
-  version "0.0.16"
-  resolved "https://registry.npmjs.org/@fewbox/react-components/-/react-components-0.0.16.tgz#1422068cbb3d7cffbbe5952849b23d63fca7dc18"
+"@fewbox/react-components@0.0.18":
+  version "0.0.18"
+  resolved "https://registry.npmjs.org/@fewbox/react-components/-/react-components-0.0.18.tgz#16cab941148c9fac30fe4c01a33bfd0783230255"
 
 "@formatjs/ecma402-abstract@^1.2.5":
   version "1.2.5"

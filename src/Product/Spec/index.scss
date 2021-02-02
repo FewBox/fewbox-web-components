@@ -1,0 +1,21 @@
+@import 'theme/fewbox-variables';
+
+.fb-product-spec {
+    margin: $product-spec-space 0;
+    a {
+        color: $more-color;
+        font-weight: bold;
+    }
+}
+.fb-product-spec-left {
+    @extend .fb-product-spec;
+    text-align: left;
+}
+.fb-product-spec-right {
+    @extend .fb-product-spec;
+    text-align: right;
+}
+.fb-product-spec-center {
+    @extend .fb-product-spec;
+    text-align: center;
+}

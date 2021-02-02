@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Hero from '../Hero';
 import Wistia from '../Wistia';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 
 export enum PromoType {
@@ -19,12 +19,12 @@ export default class Promo extends React.Component<IPromoProps, any> {
     public render() {
         return (
             <div className="fb-promo">
-                <FewBox.Layout.Row>
-                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                <Base.Layout.Row>
+                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={12}>
                         {!!(this.props.type == PromoType.Wistia) && <Wistia background={this.props.background} />}
                         {!!(this.props.type == PromoType.Hero) && <Hero background={this.props.background} />}
-                    </FewBox.Layout.Col>
-                </FewBox.Layout.Row>
+                    </Base.Layout.Col>
+                </Base.Layout.Row>
             </div>
         );
     }

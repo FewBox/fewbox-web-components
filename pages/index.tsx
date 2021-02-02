@@ -18,7 +18,7 @@ import TeamMemberIcon1Svg from '../assets/svgs/team-member-icon1.svg';
 import TeamMemberIcon2Svg from '../assets/svgs/team-member-icon2.svg';
 import TeamMemberIcon3Svg from '../assets/svgs/team-member-icon3.svg';
 import { Base } from '@fewbox/react-components';
-import { Web } from '../src/next';
+import { Web } from '../src';
 
 export interface IHomePageProps {
 }
@@ -28,7 +28,6 @@ class HomePage extends React.Component<IHomePageProps, any> {
     return (
       <IntlProvider locale={'en'} messages={langs('en-us')}>
         <Base.Analyze.GA path={(typeof (window) == 'object') ? window.location.pathname : 'unknow'} trackingId="UA-132759085-1" isDebug={true} app="components-demo" />
-        <Base.Layout.Style />
         <Base.Layout.Container>
           <Web.UI.Header logo={<LogoSvg />} slogan={<FormattedMessage id="Link.Slogan" />}>
             <Web.UI.Nav donateLink={<FormattedMessage id="Link.Donate" />} extensionNavLinks={[
@@ -45,7 +44,7 @@ class HomePage extends React.Component<IHomePageProps, any> {
             { name: <FormattedMessage id="Label.Brand" />, logo: <TempurSealySvg /> },
             { name: <FormattedMessage id="Label.Brand" />, logo: <BoostSolutionsSvg /> }
           ]} />
-        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
+        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{ backgroundColor: "#3C23C4" }}>
           <Web.UI.Product
             type={Web.UI.ProductType.FullRow}
             title={<FormattedMessage id="Label.ProductTitle" />}
@@ -68,12 +67,19 @@ class HomePage extends React.Component<IHomePageProps, any> {
             ]} />
         </Base.Layout.Container>
         <Base.Layout.Container>
-          <Web.UI.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={Web.UI.PricePaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
+          <Web.UI.Pricing title={<FormattedMessage id="Label.PricingTitle" />} description={<FormattedMessage id="Label.PricingDescription" />} registryLink={{ path: 'registry', caption: <FormattedMessage id="Link.Registry" /> }} currenty="$" paypalEnvironment={Web.UI.PricingPaypalEnvironmentType.Sandbox} paypalBusinessCode="GM5YEYHLR3XQL"
             prices={[
-              { 
-                unit: <FormattedMessage id="Label.FreeLicenseUnit" />, isRecommended: false, licenseType: Web.UI.PricingLicenseType.Free, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, discountedPrice: "0", description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p> },
               {
-                unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: Web.UI.PricingLicenseType.LicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
+                unit: <FormattedMessage id="Label.FreeLicenseUnit" />,
+                subscribeType: 'Free',
+                isRecommended: false,
+                licenseType: Web.UI.PricingLicenseType.Free,
+                licenseCaption: <FormattedMessage id="Label.FreeLicense" />,
+                discountedPrice: "0",
+                description: <p><b>Free</b> download the kubernetes version and use them <b>Now</b></p>
+              },
+              {
+                unit: <FormattedMessage id="Label.MonthlyLicenseUnit" />, subscribeType: "Monthly", isRecommended: false, licenseType: Web.UI.PricingLicenseType.Monthly, licenseCaption: <FormattedMessage id="Label.FreeLicense" />, originalPrice: "39.9", discountedPrice: "19.9", description: <div><p><b>Customized</b> search filter support</p>
                   <p>Sync the search filter on cloud</p></div>, purchase: <FormattedMessage id="Label.Purchase" />
               },
               {
@@ -82,60 +88,62 @@ class HomePage extends React.Component<IHomePageProps, any> {
               }
             ]} />
         </Base.Layout.Container>
-        <Base.Layout.Container>
+        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{ backgroundColor: "#3C23C4" }}>
           <Web.UI.FeatureGallery title={<FormattedMessage id="Label.FeatureTitle" />} description={<FormattedMessage id="Label.FeatureDescription" />} features={[
             {
-              icon: <FeatureIcon1Svg/>,
-              title:"Feature 1",
-              description:"Feature 1",
+              icon: <FeatureIcon1Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             },
             {
-              icon: <FeatureIcon2Svg/>,
-              title:"Feature 2",
-              description:"Feature 2",
+              icon: <FeatureIcon2Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             },
             {
-              icon: <FeatureIcon3Svg/>,
-              title:"Feature 3",
-              description:"Feature 3",
+              icon: <FeatureIcon3Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             },
             {
-              icon: <FeatureIcon4Svg/>,
-              title:"Feature 4",
-              description:"Feature 4",
+              icon: <FeatureIcon4Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             },
             {
-              icon: <FeatureIcon5Svg/>,
-              title:"Feature 5",
-              description:"Feature 5",
+              icon: <FeatureIcon5Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             },
             {
-              icon: <FeatureIcon6Svg/>,
-              title:"Feature 6",
-              description:"Feature 6",
+              icon: <FeatureIcon6Svg />,
+              title: <FormattedMessage id="Label.Todo" />,
+              description: <FormattedMessage id="Label.Todo" />,
               moreCaption: <FormattedMessage id="Label.More" />,
               morePath: 'feature'
             }
           ]} />
         </Base.Layout.Container>
-        <Base.Layout.Container type={Base.Layout.ContainerType.Full} style={{backgroundColor:"#3C23C4"}}>
+        <Base.Layout.Container>
           <Web.UI.Team title={<FormattedMessage id="Label.TeamTitle" />} description={<FormattedMessage id="Label.TeamDescription" />} teamMembers={[
-            {avatar: <TeamMemberIcon1Svg/>, title:"Cofounder",description:"Be SMART!",
-            socialAccounts:[
-              {icon:<EmailSvg />, link: 'mailto://xl@fewbox.com'}
-            ]},
-            {avatar: <TeamMemberIcon2Svg/>, title:"Cofounder",description:"Be SAMPLE!"},
-            {avatar: <TeamMemberIcon3Svg/>, title:"Cofounder",description:"Be SPECIAL!"}
+            {
+              avatar: <TeamMemberIcon1Svg />, title: "Cofounder", description: "Be SMART!",
+              socialAccounts: [
+                { icon: <EmailSvg />, link: 'mailto://xl@fewbox.com' }
+              ]
+            },
+            { avatar: <TeamMemberIcon2Svg />, title: "Cofounder", description: "Be SAMPLE!" },
+            { avatar: <TeamMemberIcon3Svg />, title: "Cofounder", description: "Be SPECIAL!" }
           ]} />
         </Base.Layout.Container>
         <Web.UI.Footer logo={<LogoSvg />} copyrightCaption={<FormattedMessage id="Label.Copyright" />} />

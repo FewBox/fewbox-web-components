@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Section from '../Section';
 import Card from './Card';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 export enum PricingLicenseType {
     Free,
@@ -46,13 +46,13 @@ export default class Pricing extends React.Component<IPricingProps, any> {
         return (
             <div className="fb-pricing">
                 <Section title={this.props.title} description={this.props.description} />
-                <FewBox.Layout.Row>
+                <Base.Layout.Row>
                     {this.props.prices.map((price, priceIndex) => {
-                        return <FewBox.Layout.Col key={`price${priceIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / this.props.prices.length}>
+                        return <Base.Layout.Col key={`price${priceIndex}`} type={Base.Layout.ColType.Medium} columnCount={12 / this.props.prices.length}>
                             <Card unit={price.unit} subscribeType={price.subscribeType} purchase={price.purchase} currenty={this.props.currenty} paypalBusinessCode={this.props.paypalBusinessCode} paypalEnvironment={this.props.paypalEnvironment} isRecommended={price.isRecommended} licenseType={price.licenseType} licenseCaption={price.licenseCaption} originalPrice={price.originalPrice} discountedPrice={price.discountedPrice} description={price.description} registryLink={this.props.registryLink} />
-                        </FewBox.Layout.Col>
+                        </Base.Layout.Col>
                     })}
-                </FewBox.Layout.Row>
+                </Base.Layout.Row>
             </div>
         );
     }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Section from '../Section';
 import ProductScreenshot from './Screenshot';
 import ProductSpec from './Spec';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 export enum ProductType {
     Normal,
@@ -39,35 +39,35 @@ export default class Product extends React.Component<IProductProps, any> {
                     let featureRow;
                     switch (this.props.type) {
                         case ProductType.Normal:
-                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1} />
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 4 : 6}>
+                            featureRow = <Base.Layout.Row key={`feature${featureIndex}`}>
+                                <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={1} />
+                                <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 4 : 6}>
                                     {!!(featureIndex % 2 == 0) ? <ProductScreenshot textAlignType={TextAlignType.Right} image={feature.image} /> : <ProductSpec textAlignType={TextAlignType.Right} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} />}
-                                </FewBox.Layout.Col>
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 6 : 4}>
+                                </Base.Layout.Col>
+                                <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={(featureIndex % 2 == 0) ? 6 : 4}>
                                     {!!(featureIndex % 2 == 0) ? <ProductSpec textAlignType={TextAlignType.Left} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} /> : <ProductScreenshot textAlignType={TextAlignType.Left} image={feature.image} />}
-                                </FewBox.Layout.Col>
-                                <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1} />
-                            </FewBox.Layout.Row>
+                                </Base.Layout.Col>
+                                <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={1} />
+                            </Base.Layout.Row>
                             break;
                         case ProductType.FullRow:
-                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}>
-                                <FewBox.Layout.Row>
-                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1}></FewBox.Layout.Col>
-                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={10}>
+                            featureRow = <Base.Layout.Row key={`feature${featureIndex}`}>
+                                <Base.Layout.Row>
+                                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={1}></Base.Layout.Col>
+                                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={10}>
                                         <ProductScreenshot textAlignType={TextAlignType.Center} image={feature.image} />
-                                    </FewBox.Layout.Col>
-                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={1}></FewBox.Layout.Col>
-                                </FewBox.Layout.Row>
-                                <FewBox.Layout.Row>
-                                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                                    </Base.Layout.Col>
+                                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={1}></Base.Layout.Col>
+                                </Base.Layout.Row>
+                                <Base.Layout.Row>
+                                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={12}>
                                         <ProductSpec textAlignType={TextAlignType.Center} name={feature.name} descriptions={feature.descriptions} morePath={feature.morePath} moreCaption={feature.moreCaption} />
-                                    </FewBox.Layout.Col>
-                                </FewBox.Layout.Row>
-                            </FewBox.Layout.Row>
+                                    </Base.Layout.Col>
+                                </Base.Layout.Row>
+                            </Base.Layout.Row>
                             break;
                         default:
-                            featureRow = <FewBox.Layout.Row key={`feature${featureIndex}`}></FewBox.Layout.Row>;
+                            featureRow = <Base.Layout.Row key={`feature${featureIndex}`}></Base.Layout.Row>;
                             break;
                     }
                     return featureRow;

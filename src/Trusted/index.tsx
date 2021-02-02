@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Brand from '../Brand';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 export interface Client {
     name: JSX.Element;
@@ -16,18 +16,18 @@ export default class Trusted extends React.Component<ITrustedProps, any> {
     public render() {
         return (
             <div className="fb-trusted">
-                <FewBox.Layout.Row textAlignType={FewBox.Layout.RowTextAlignType.Center}>
-                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                <Base.Layout.Row textAlignType={Base.Layout.TextAlignType.Center}>
+                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={12}>
                         <h5>{this.props.caption}</h5>
-                    </FewBox.Layout.Col>
-                </FewBox.Layout.Row>
-                <FewBox.Layout.Row textAlignType={FewBox.Layout.RowTextAlignType.Center}>
-                    <FewBox.Layout.Col type={FewBox.Layout.ColType.Medium} columnCount={12}>
+                    </Base.Layout.Col>
+                </Base.Layout.Row>
+                <Base.Layout.Row textAlignType={Base.Layout.TextAlignType.Center}>
+                    <Base.Layout.Col type={Base.Layout.ColType.Medium} columnCount={12}>
                         {!!this.props.clients && this.props.clients.map((client, clientIndex) => {
                             return <Brand name={client.name} logo={client.logo} key={`client${clientIndex}`} />;
                         })}
-                    </FewBox.Layout.Col>
-                </FewBox.Layout.Row>
+                    </Base.Layout.Col>
+                </Base.Layout.Row>
             </div>
         );
     }

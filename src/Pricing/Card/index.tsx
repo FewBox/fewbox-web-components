@@ -22,7 +22,7 @@ export interface IPricingCardProps {
 export default class PricingCard extends React.Component<IPricingCardProps, any> {
     public render() {
         return (
-            <div className="license">
+            <div className="fb-pricing-card">
                 {!!this.props.isRecommended && <div className="recommended"><RecommendedSvg /></div>}
                 <div className="type">{this.props.licenseCaption}</div>
                 <div className="splitLine"></div>

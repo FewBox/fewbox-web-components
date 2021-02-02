@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Section from '../Section';
 import Card from './Card';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 export interface SocialAccount {
     icon: JSX.Element;
@@ -31,16 +31,16 @@ export default class Team extends React.Component<ITeamProps, any> {
             let cols: JSX.Element[] = [];
             for (let colIndex = 1; colIndex <= colCount; colIndex++) {
                 if (teamMemberIndex <= this.props.teamMembers.length) {
-                    let col = <FewBox.Layout.Col key={`teamMemberRow${rowIndex}Col${colIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
+                    let col = <Base.Layout.Col key={`teamMemberRow${rowIndex}Col${colIndex}`} type={Base.Layout.ColType.Medium} columnCount={12 / colCount}>
                         <Card teamMember={this.props.teamMembers[teamMemberIndex - 1]} />
-                    </FewBox.Layout.Col>;
+                    </Base.Layout.Col>;
                     cols.push(col);
                     teamMemberIndex++;
                 }
             }
-            let row = <FewBox.Layout.Row key={`teamMemberRow${rowIndex}`} textAlignType={FewBox.Layout.RowTextAlignType.Center}>
+            let row = <Base.Layout.Row key={`teamMemberRow${rowIndex}`} textAlignType={Base.Layout.TextAlignType.Center}>
                 {cols}
-            </FewBox.Layout.Row>;
+            </Base.Layout.Row>;
             rows.push(row);
         }
         return (

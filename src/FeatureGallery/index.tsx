@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Section from '../Section';
 import Card from './Card';
-import * as FewBox from '@fewbox/react-components';
+import { Base } from '@fewbox/react-components';
 
 export interface Feature {
     icon: JSX.Element;
@@ -27,16 +27,16 @@ export default class FeatureGallery extends React.Component<IFeatureGalleryProps
             let cols: JSX.Element[] = [];
             for (let colIndex = 1; colIndex <= colCount; colIndex++) {
                 if (featureIndex <= this.props.features.length) {
-                    let col = <FewBox.Layout.Col key={`featureRow${rowIndex}Col${colIndex}`} type={FewBox.Layout.ColType.Medium} columnCount={12 / colCount}>
+                    let col = <Base.Layout.Col key={`featureRow${rowIndex}Col${colIndex}`} type={Base.Layout.ColType.Medium} columnCount={12 / colCount}>
                         <Card feature={this.props.features[featureIndex - 1]} />
-                    </FewBox.Layout.Col>;
+                    </Base.Layout.Col>;
                     cols.push(col);
                     featureIndex++;
                 }
             }
-            let row = <FewBox.Layout.Row key={`featureRow${rowIndex}`} textAlignType={FewBox.Layout.RowTextAlignType.Center}>
+            let row = <Base.Layout.Row key={`featureRow${rowIndex}`} textAlignType={Base.Layout.TextAlignType.Center}>
                 {cols}
-            </FewBox.Layout.Row>;
+            </Base.Layout.Row>;
             rows.push(row);
         }
         return (

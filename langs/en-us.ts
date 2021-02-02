@@ -26,7 +26,9 @@ export default {
     'Label.TeamTitle': 'Teams',
     'Label.TeamDescription': 'WHO WE ARE',
     'Label.Purchase': 'Purchase',
-    'Label.FreeLicenseUnit': '',
+    'Label.FreeLicenseUnit': ' ',
     'Label.MonthlyLicenseUnit': '/month',
-    'Label.YearlyLicenseUnit': 'year'
+    'Label.YearlyLicenseUnit': '/year',
+    'Label.Todo': 'Todo'
+
 }

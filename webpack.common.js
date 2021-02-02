@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
-    entry: path.resolve(__dirname, 'src/index.ts'),
+    entry: path.resolve(__dirname, 'src/webpack.ts'),
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'index.js',
@@ -33,7 +33,7 @@ const config = {
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: 'fewbox.min.css',
+            filename: 'fewbox-web.min.css',
             chunkFilename: '[id].min.css',
         })
     ],

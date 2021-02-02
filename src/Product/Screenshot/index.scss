@@ -1,0 +1,22 @@
+@import 'theme/fewbox-variables';
+
+.fb-product-screenshot {
+    margin: $product-screenshot-space 0;
+    img {
+        border-radius: $product-screenshot-radius;
+        box-shadow:0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+        width: 100%;
+    }
+}
+.fb-product-screenshot-left {
+    @extend .fb-product-screenshot;
+    text-align: left;
+}
+.fb-product-screenshot-right {
+    @extend .fb-product-screenshot;
+    text-align: right;
+}
+.fb-product-screenshot-center {
+    @extend .fb-product-screenshot;
+    text-align: center;
+}

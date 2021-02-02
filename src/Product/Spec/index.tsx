@@ -12,15 +12,15 @@ export interface IProductSpecProps {
 
 export default class ProductSpec extends React.Component<IProductSpecProps, any> {
     public render() {
-        let className = 'spec';
+        let className;
         if (this.props.textAlignType == TextAlignType.Left) {
-            className += ' spec-left';
+            className = 'fb-product-spec-left';
         }
         else if (this.props.textAlignType == TextAlignType.Right) {
-            className += ' spec-right';
+            className = 'fb-product-spec-right';
         }
         else {
-            className += ' spec-center';
+            className = 'fb-product-spec-center';
         }
         return (
             <div className={className}>

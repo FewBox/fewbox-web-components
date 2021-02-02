@@ -8,15 +8,15 @@ export interface IProductScreenshotProps {
 
 export default class ProductScreenshot extends React.Component<IProductScreenshotProps, any> {
     public render() {
-        let className = 'screenshot';
+        let className;
         if (this.props.textAlignType == TextAlignType.Left) {
-            className += ' screenshot-left';
+            className = 'fb-product-screenshot-left';
         }
         else if (this.props.textAlignType == TextAlignType.Right) {
-            className += ' screenshot-right';
+            className = 'fb-product-screenshot-right';
         }
         else {
-            className += ' screenshot-center';
+            className = 'fb-product-screenshot-center';
         }
         return (
             <div className={className}>
