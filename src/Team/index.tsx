@@ -10,8 +10,8 @@ export interface SocialAccount {
 
 export interface TeamMember {
     avatar: JSX.Element;
-    title: string;
-    description?: string;
+    title: JSX.Element;
+    description?: JSX.Element;
     socialAccounts?: SocialAccount[];
 }
 
